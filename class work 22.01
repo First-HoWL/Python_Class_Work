@@ -68,28 +68,6 @@ print((a // 10 ** (b1 - a1)) % 10)
 
 '''
 
-'''
-correctquestion = 0
-
-print('Що означає Int в Python')
-print('1.Це тип змінної')
-print('2.Це можно використовувати замість elif')
-print('3.Це скорочення від Infinity')
-print('4.Цього не має в Python')
-quest1 = int(input('Який варіант правильний'))
-if quest1 == 1:
-    print('Correct!')
-    correctquestion = correctquestion + 1
-else:
-    print('Невірно')
-
-print('Що означає Str в Python')
-print('1.')
-print('2.Це можно використовувати замість elif')
-print('3.Це тип змінної')
-print('4.Цього не має в Python')
-'''
-
 
 correctquestion = 0
 
