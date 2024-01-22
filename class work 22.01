@@ -68,7 +68,7 @@ print((a // 10 ** (b1 - a1)) % 10)
 
 '''
 
-
+'''
 correctquestion = 0
 
 print('Що означає Int в Python')
@@ -88,3 +88,79 @@ print('1.')
 print('2.Це можно використовувати замість elif')
 print('3.Це тип змінної')
 print('4.Цього не має в Python')
+'''
+
+
+correctquestion = 0
+
+print('Що означає Int в Python')
+print('1.Це тип змінної')
+print('2.Це можно використовувати замість elif')
+print('3.Це скорочення від Infinity')
+print('4.Цього не має в Python')
+quest1 = int(input('Який варіант правильний'))
+if quest1 == 1:
+    print('Correct!')
+    correctquestion = correctquestion + 1
+else:
+    print('Невірно')
+
+print('Що означає Str в Python')
+print('1.Це команда яка визиває функцію')
+print('2.Це можно використовувати замість if')
+print('3.Це тип змінної')
+print('4.Цього не має в Python')
+quest2 = int(input('Який варіант правильний'))
+if quest2 == 3:
+    print('Correct!')
+    correctquestion = correctquestion + 1
+else:
+    print('Невірно')
+
+print('Що таке процесор')
+print('1.Це оболонка у якій знаходяться всі комплектуючі колмп\'ютера')
+print('2.Це мова програмування')
+print('3.Це тип змінної')
+print('4.Це мозок комп\'ютера')
+quest3 = int(input('Який варіант правильний'))
+if quest3 == 4:
+    print('Correct!')
+    correctquestion = correctquestion + 1
+else:
+    print('Невірно')
+
+print('Що таке ctrl')
+print('1.Це кнопка на клавіатурі')
+print('2.Це вип клавіатури')
+print('3.Це программа для вивчення язику програмування')
+print('4.Це мова програмування')
+quest4 = int(input('Який варіант правильний'))
+if quest4 == 1:
+    print('Correct!')
+    correctquestion = correctquestion + 1
+else:
+    print('Невірно')
+
+
+print('Що таке Python')
+print('1.Це команда яка визиває функцію')
+print('2.Це видумане слово')
+print('3.Це назва комп\'ютерної гри')
+print('4.Це мова програмування')
+quest5 = int(input('Який варіант правильний'))
+if quest5 == 4:
+    print('Correct!')
+    correctquestion = correctquestion + 1
+else:
+    print('Невірно')
+
+print('Правильних відповідей:', correctquestion)
+
+if correctquestion in (0, 1):
+    print('Дуже погано')
+elif correctquestion in (2, 3):
+    print('нормально')
+elif correctquestion in (4, 5):
+    print('Дуже добре')
+
+
