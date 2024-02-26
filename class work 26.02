@@ -41,9 +41,17 @@ while True:
             break
     if stop_program == 1:
         break
-
-
     currency_to = str(input('Друга валюта'))
+    for i in range(len(currensies_list)):
+        if currency_to == currensies_list[i]:
+            break
+        elif i == len(currensies_list) - 1:
+            print('NOT CORRECT!!!!!!')
+            stop_program = 1
+            break
+    if stop_program == 1:
+        break
+
     amount = int(input('Скільки?'))
 
     url = f'{address}currencies/{currency_from}/{currency_to}.json'
