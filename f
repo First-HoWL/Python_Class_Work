@@ -30,14 +30,27 @@ def bubble_sort(list, sortByGrowth):
                 list[i], list[i + 1] = list[i + 1], list[i]
                 is_changed = True
 
+def fsum(list):
+    fsumansw = int(0)
+    for i in range(len(list)):
+        fsumansw += list[i]
+    return fsumansw
 
 
 
+# numb = sort_list('Введіть списо чисел через пробіл')
+# sortByGrow = input_yes_no('Ви чочете відформатувати список за зростанням? (т/н)')
+# bubble_sort(numb, sortByGrow)
+# print(f'{numb}')
+#
 
 
-numb = sort_list('Введіть списо чисел через пробіл')
-sortByGrow = input_yes_no('Ви чочете відформатувати список за зростанням? (т/н)')
-bubble_sort(numb, sortByGrow)
-print(f'{numb}')
+'''
+1
 
+print(fsum(sort_list('Введіть списо чисел через пробіл: ')))
+
+'''
+
+print(bubble_sort(sort_list('Введіть списо чисел через пробіл: '), True)[0])
 
