@@ -51,18 +51,7 @@ async def cmd_random_disney_person(message: types.Message):
     if response.ok:
         await message.answer(f"Ім\'я: {currensies_data['name']}\nФільми:{disney_return_list(currensies_data['films'])}\n"
                              f"Короткі фильми:\n{disney_return_list(currensies_data['shortFilms'])}\nТВ-шоу:\n"
-                             f"{disney_return_list(currensies_data['tvShows'])}\nТВ-шоу\n{disney_return_list(currensies_data['tvShows'])}\nІгри:")
-
-        print('')
-        for i in range(len()):
-            print("  -", [0].replace("[]", "---"))
-        print()
-        for i in range(len(currensies_data['videoGames'])):
-            print("  -", currensies_data['videoGames'][i].replace("[]", "---"))
-    else:
-        print('Щось пішло не так...')
-        print(f'{response.status_code=}')
-
+                             f"{disney_return_list(currensies_data['tvShows'])}\nТВ-шоу\n{disney_return_list(currensies_data['tvShows'])}\nІгри:\n{disney_return_list(currensies_data['videoGames'])}")
 
 
 
