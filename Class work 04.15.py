@@ -25,3 +25,10 @@ while True:
             file.write('\n'.join(products))
     else:
         print('Not correct!')
+
+'''
+удобная запись
+for index, product in enumerate(list):
+    print(f'{index}. {product}')
+
+'''
