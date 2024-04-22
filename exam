@@ -1,0 +1,86 @@
+import random
+spisok = 'records.txt'
+
+
+def random_number():
+    number = random.randint(int(1), int(100))
+    return number
+
+
+def game_over(count):
+    print(f'Ваш Счёт: {count}')
+    with open(spisok, mode='r', encoding='utf8') as file:
+        records = file.read().split('\n')
+    if count > int(records[0]):
+        with open(spisok, mode='w', encoding='utf8') as file:
+            file.write(str(count))
+    # if count > int((records[4].split(':'))[1]):
+    #     record_i = (records[4].split(':'))[1]
+    #     print(record_i)
+    #     if count > int(record_i):
+    #         records.pop(4)
+    #         name = input('Your name:')
+    #         records.append(f'{name}: {count}')
+    #         records = sort(records)
+    # with open(spisok, mode='w', encoding='utf8') as file:
+    #     file.write('\n'.join(records))
+
+
+def sort(lists):
+    print(lists)
+    list_for = []
+    for i in lists:
+        list_for += (i.split(':'))
+    print(list_for)
+    a = bubble_sort(list_for)
+    print(a)
+    return a
+
+
+def bubble_sort(list_for):
+    list_name = [list_for[0], list_for[2], list_for[4], list_for[6], list_for[8]]
+    list_numb = [list_for[1], list_for[3], list_for[5], list_for[7], list_for[9]]
+    is_changed = True
+    while is_changed:
+        is_changed = False
+        for i in range(len(list_numb) - 1):
+            if list_numb[i] < list_numb[i + 1]:
+                list_numb[i], list_numb[i + 1] = list_numb[i + 1], list_numb[i]
+                list_name[i], list_name[i + 1] = list_name[i + 1], list_name[i]
+                print(list_numb)
+                is_changed = True
+    lists = [f'{list_name[0]}:{list_numb[0]}', f'{list_name[1]}:{list_numb[1]}', f'{list_name[2]}:{list_numb[2]}', f'{list_name[3]}:{list_numb[3]}', f'{list_name[4]}:{list_numb[4]}']
+    return (lists)
+
+
+
+lives = 3
+count = int()
+while True:
+    first_number = int(random_number())
+    second_number = int(random_number())
+    answer = input(f'{first_number} + {second_number} = ')
+    while True:
+        if answer.isnumeric() or answer.lower() in ['quit', 'q', 'вихід', 'повернутися', 'закінчити'] or lives <= 0:
+            break
+        else:
+            print('Not Correct answer!')
+            answer = input(f'{first_number} + {second_number} = ')
+    if answer.lower() in ['quit', 'q', 'вихід', 'повернутися', 'закінчити'] or lives <= 0:
+        game_over(count)
+        break
+    if int(answer) == first_number + second_number:
+        print('Correct!')
+        count += 1
+    else:
+        print(f'Not Correct! {first_number} + {second_number} = {first_number + second_number}')
+        lives -= 1
+    if lives <= 0:
+        print('Game over!')
+        game_over(count)
+        break
+
+    print(f'Жизней: {lives}')
+    print(f'Счёт: {count}')
+
+
